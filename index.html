@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>שנת בת המצווה — מסע אבא ובת ב־12 ראשי חודשים</title>
+<meta name="description" content="שנה שלמה של פעילויות אבא־בת, ראש חודש בחודשו, מחשוון תשפ״ז עד אלול תשפ״ז — לקראת בת המצווה.">
+<meta property="og:title" content="שנת בת המצווה — מסע אבא ובת ב־12 ראשי חודשים">
+<meta property="og:description" content="כל ראש חודש: דמות של אישה גדולה, פעילות משותפת, ספר וציור. מחשוון תשפ״ז עד אלול תשפ״ז.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf5ef; --card:#ffffff; --ink:#2e2622; --ink2:#6b5f58;
+  --plum:#6d4a5e; --plum-soft:#f3e9ee; --gold:#b98a3c; --gold-soft:#f7efe0;
+  --teal:#3f7d6e; --hairline:#ece4dc; --shadow:0 2px 10px rgba(46,38,34,.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Assistant',system-ui,sans-serif;
+  background:var(--bg); color:var(--ink);
+  font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.month-name{font-family:'Heebo',sans-serif}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 64px}
+
+/* Hero */
+.hero{
+  text-align:center; padding:44px 20px 28px;
+  background:linear-gradient(180deg,var(--plum) 0%,#7d5870 100%);
+  color:#fff; border-radius:0 0 28px 28px;
+}
+.hero .kicker{font-size:14px;letter-spacing:.06em;opacity:.85;font-weight:600}
+.hero h1{font-size:30px;font-weight:800;line-height:1.25;margin:10px 0 8px}
+.hero p{font-size:16px;opacity:.92;max-width:480px;margin:0 auto}
+.hero .dates{
+  display:inline-block;margin-top:16px;padding:7px 16px;border-radius:999px;
+  background:rgba(255,255,255,.14);font-size:14px;font-weight:600;
+}
+
+/* Progress */
+.progress-shell{
+  position:sticky;top:0;z-index:20;background:var(--bg);
+  padding:12px 0 10px;border-bottom:1px solid var(--hairline);
+}
+.progress-line{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink2);font-weight:600}
+.progress-bar{flex:1;height:8px;border-radius:99px;background:#eee4d9;overflow:hidden}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--plum));border-radius:99px;transition:width .4s ease}
+
+/* Intro */
+.intro{margin:26px 0 8px;background:var(--gold-soft);border-radius:16px;padding:18px 20px;font-size:15.5px}
+.intro strong{color:var(--plum)}
+
+/* Month cards */
+.month{
+  background:var(--card);border-radius:18px;box-shadow:var(--shadow);
+  margin-top:22px;overflow:hidden;border:1px solid var(--hairline);
+}
+.month.now{border:2px solid var(--gold)}
+.month-head{
+  display:flex;align-items:center;gap:12px;padding:16px 18px 12px;
+}
+.num{
+  flex:0 0 40px;height:40px;border-radius:50%;background:var(--plum-soft);color:var(--plum);
+  display:flex;align-items:center;justify-content:center;font-family:'Heebo';font-weight:800;font-size:17px;
+}
+.month.now .num{background:var(--gold);color:#fff}
+.month-name{font-size:20px;font-weight:800}
+.rc-date{font-size:13.5px;color:var(--ink2);font-weight:600}
+.now-badge{
+  margin-right:auto;background:var(--gold);color:#fff;font-size:12px;font-weight:700;
+  padding:4px 10px;border-radius:99px;white-space:nowrap;
+}
+.figure{
+  margin:0 18px 12px;padding:12px 14px;border-radius:12px;background:var(--plum-soft);
+  font-size:15px;
+}
+.figure b{color:var(--plum);font-family:'Heebo'}
+.section{padding:10px 18px;border-top:1px solid var(--hairline)}
+.section h3{font-size:14px;font-weight:700;color:var(--teal);margin-bottom:4px;letter-spacing:.02em}
+.section p{font-size:15.5px}
+.note{font-size:13px;color:var(--ink2);margin-top:4px}
+.note::before{content:"ⓘ ";font-style:normal}
+.done-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 18px 16px;border-top:1px solid var(--hairline);
+}
+.done-btn{
+  font-family:'Heebo';font-weight:700;font-size:14px;border:2px solid var(--plum);color:var(--plum);
+  background:#fff;border-radius:99px;padding:7px 18px;cursor:pointer;min-height:44px;
+  transition:all .2s ease;
+}
+.done-btn.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.month.completed .month-name{color:var(--teal)}
+.month.completed .num{background:var(--teal);color:#fff}
+
+/* Finale card */
+.finale{background:linear-gradient(160deg,#fff 0%,var(--gold-soft) 100%);border:1px solid var(--gold)}
+
+/* Footer */
+footer{margin-top:34px;font-size:13.5px;color:var(--ink2);text-align:center;line-height:1.8}
+footer .card{background:var(--card);border:1px solid var(--hairline);border-radius:14px;padding:16px 18px;text-align:right;box-shadow:var(--shadow)}
+@media (min-width:560px){
+  .hero h1{font-size:36px}
+  .month-name{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="kicker">מחשוון תשפ״ז עד אלול תשפ״ז</div>
+  <h1>שנת בת המצווה</h1>
+  <p>שנה שלמה של רגעי אבא־בת: בכל ראש חודש פעילות אחת קטנה ומשמעותית, דמות של אישה אחת גדולה, ספר אחד וציור אחד. עד החגיגה הגדולה באלול.</p>
+  <div class="dates">12 ראשי חודשים · אוקטובר 2026 — ספטמבר 2027</div>
+</header>
+
+<div class="wrap">
+
+<div class="progress-shell">
+  <div class="progress-line">
+    <span id="progressLabel">0 מתוך 12</span>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+</div>
+
+<div class="intro">
+  <strong>איך זה עובד?</strong> בכל ראש חודש (או סמוך לו, ביום חול או ביום ראשון) יוצאים לפעילות קצרה יחד — לפעמים טיול קטן באזור, לפעמים משהו בבית. במקביל קוראים ספר ומציירים ציור. כל הציורים נשמרים — בסוף השנה מכינים מהם אלבום לבת המצווה.
+</div>
+
+<!-- 1. Cheshvan -->
+<section class="month now" id="m1">
+  <div class="month-head">
+    <div class="num">1</div>
+    <div>
+      <div class="month-name">חשוון תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 12 באוקטובר 2026</div>
+    </div>
+    <span class="now-badge">מתחילים עכשיו!</span>
+  </div>
+  <div class="figure"><b>שרה אמנו</b> — האישה של ההתחלות: בכל גיל אפשר לפתוח דלת חדשה. גם השנה שלנו מתחילה ממש עכשיו.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>ערב פתיחה בבית: קונים מחברת יפה ומכנים אותה <b>״ספר השרשרת״</b> — היא תעבור בין אבא לבת כל השנה. אחר כך: ראיון קצר עם אמא — מה אהבה לקרוא בגיל 11? מה אהבה לצייר? התשובות נכנסות לספר.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״שרה, גיבורת ניל״י״</b> — דבורה עומר. סיפורה האמיתי של שרה אהרנסון, מהספרות הישראלית הקלאסית לבנות.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>מעצבות ומעצבים יחד את עטיפת ״ספר השרשרת״ — שם, תאריך, ומשהו שמסמל אתכם שניכם.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">חודש הפתיחה — אפשר גם אחרי ראש חודש</span>
+    <button class="done-btn" data-month="1">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 2. Kislev -->
+<section class="month" id="m2">
+  <div class="month-head">
+    <div class="num">2</div>
+    <div>
+      <div class="month-name">כסלו תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 11 בנובמבר 2026 · חנוכה: 4–12 בדצמבר</div>
+    </div>
+  </div>
+  <div class="figure"><b>רבקה אמנו</b> — שראתה זר צמא בדרך ולא חיכתה שיבקשו: נתנה לו לשתות, וגם לגמלים שלו. חסד שמתחיל ממני.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>בוחרים מעשה חסד לאנשים שלא מכירים: התנדבות קצרה, אירוח משפחה לארוחה, או לקראת חנוכה — חלוקת סופגניות וחבילה קטנה לשכנים או לאשפוז בבית החולים הקרוב.</p>
+    <p class="note">לבדוק מראש איפה שמחים לקבל — בית חולים/עמותה מקומית דורשים תיאום.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״יומנה של אנה פרנק״</b>. בחודש חנוכה שווה לקרוא במיוחד את פרק החנוכה בבית המחבוא — איך מדליקים אור דווקא במקום החשוך.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>חנוכייה מדמיון: שמונה נרות לכל המשפחה — ונר תשיעי מיוחד, רק שלה.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">שילוב יפה: הפעילות באחד מימי חנוכה</span>
+    <button class="done-btn" data-month="2">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 3. Tevet -->
+<section class="month" id="m3">
+  <div class="month-head">
+    <div class="num">3</div>
+    <div>
+      <div class="month-name">טבת תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 11 בדצמבר 2026</div>
+    </div>
+  </div>
+  <div class="figure"><b>חנה</b> — שהתפללה בשקט, מהלב, מילה מילה. ממנה למדנו שתפילה אישית אפשר לומר בכל מקום, גם בלי קול.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>טיולת קצרה למקום שקט ויפה ליד הבית (למשל שביל בעמק לקראת שקיעה). כל אחד כותב לעצמו תפילה אישית או משאלה לשנה — ומכניס ל״ספר השרשרת״.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״הנסיך הקטן״</b> — אנטואן דה סנט־אכזופרי. על הדברים החשובים שהעין לא רואה — בדיוק כמו תפילה של הלב.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>״מה שהלב מבקש״ — ציור חופשי, בלי הסברים. אם מתחשק — כמה מילים ליד.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">חודש חורפי שקט — מתאים לבית</span>
+    <button class="done-btn" data-month="3">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 4. Shevat -->
+<section class="month" id="m4">
+  <div class="month-head">
+    <div class="num">4</div>
+    <div>
+      <div class="month-name">שבט תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 9 בינואר 2027 · ט״ו בשבט: 23 בינואר</div>
+    </div>
+  </div>
+  <div class="figure"><b>רחל ולאה</b> — שתי אחיות, סיפור מסובך שאפשר ללמוד ממנו על אחיות: תחרות אפשר להחליף בשותפות.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>יום אחיות: היא מארחת את האחיות והאחים למשהו שהיא בונה. ולקראת ט״ו בשבט — נטיעה משפחתית: עץ או עציץ בבית, עם שם ותאריך.</p>
+    <p class="note">ט״ו בשבת חל ביום שבת השנה — עושים את הנטיעה ביום חול הסמוך או ביום ראשון 24.1.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״דפי תמר״</b> — דבורה עומר. יומנה של נערה בת 12 בקיבוץ, קלאסיקה ישראלית אהובה — ובחודש של העצים, נערה ששמה תמר.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>עץ המשפחה שלנו — נוסח ראשון. נשמור אותו: באלול נשלים אותו עם מה שנגלה בדרך.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">העציץ שנטעים ימשיך לגדול איתה כל השנה</span>
+    <button class="done-btn" data-month="4">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 5. Adar I -->
+<section class="month" id="m5">
+  <div class="month-head">
+    <div class="num">5</div>
+    <div>
+      <div class="month-name">אדר א׳ תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 8 בפברואר 2027 · שנת עיבור — יש שני אדרים!</div>
+    </div>
+  </div>
+  <div class="figure"><b>דבורה הנביאה</b> — שפטה את ישראל תחת תמר, הנהיגה באומץ ובשכל, ושרה שירת ניצחון (שופטים ד–ה).</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>טיול להר תבור — ההר שממנו יצאה הקריאה של דבורה. בחודש הזה השקדיות פורחות בדרך. למעלה קוראים יחד את שירת דבורה.</p>
+    <p class="note">כ־40 דקות נסיעה משדמות מחולה. מסלול ושעות כניסה לא נבדקו — לוודא לפני היציאה.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״רוניה בת השודד״</b> — אסטריד לינדגרן. ילדה אמיצה ועצמאית שמחליטה בעצמה מה נכון — קלאסיקה עולמית.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>דבורה יושבת תחת התמר שלה — איך נראית לדעתה מנהיגה אמיתית?</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">בונוס של שנת עיבור: חודש נוסף בשנה</span>
+    <button class="done-btn" data-month="5">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 6. Adar II -->
+<section class="month" id="m6">
+  <div class="month-head">
+    <div class="num">6</div>
+    <div>
+      <div class="month-name">אדר ב׳ תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 10 במרץ 2027 · פורים: 23 במרץ</div>
+    </div>
+  </div>
+  <div class="figure"><b>אסתר המלכה</b> — שמצאה בדיוק את הרגע הנכון לדבר, והצילה עם שלם. אומץ ותבונה יחד.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>לקראת פורים: קריאה משותפת של מגילת אסתר, פרק בכל ערב. ובשבוע שלפני — מכינים יחד משלוח מנות משפחתי מושקע.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>מגילת אסתר</b> עצמה — הסיפור המקורי, עשרה פרקים בדיוק. (למי שרוצה נוסח מעובד: ״ספור מגילת אסתר״, הוצאת מודן.)</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>מעצבת על הנייר את תחפושת הפורים שלה — או מסכה, כתר, או דמות שלמה מהמגילה.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">משלוח המנות הוא חלק מהפעילות</span>
+    <button class="done-btn" data-month="6">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 7. Nisan -->
+<section class="month" id="m7">
+  <div class="month-head">
+    <div class="num">7</div>
+    <div>
+      <div class="month-name">ניסן תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 8 באפריל 2027 · סדר: ערב 21.4 · חג: 22–28.4</div>
+    </div>
+  </div>
+  <div class="figure"><b>מרים הנביאה</b> — שמרה על אחיה הקטן על שפת היאור, ואחרי קריעת ים סוף הוציאה את התוף ופתחה בשירה.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>טיול מים בפארק המעיינות בעמק בית שאן — גן השלושה (הסחנה), עין מודע או נחל הקיבוצים. קוראים על החוף את שירת הים.</p>
+    <p class="note">כ־15 דקות מהבית. שעות פתיחה, מחירים ועונת רחצה לא נבדקו — לוודא לפני היציאה.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״מרים, ספרי לי את״</b> — אורנה פילץ (כנרת זמורה דביר). מרים הקטנה שמצילה את אחיה התינוק על שפת היאור.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>מרים עם התוף על שפת הים, והעם שר אחריה — תנועה, מים, שמחה.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">אפשר גם בחול המועד פסח</span>
+    <button class="done-btn" data-month="7">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 8. Iyar -->
+<section class="month" id="m8">
+  <div class="month-head">
+    <div class="num">8</div>
+    <div>
+      <div class="month-name">אייר תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 8 במאי 2027</div>
+    </div>
+  </div>
+  <div class="figure"><b>ברוריה</b> — אשת חכמה ממשפחת טנאים, שלמדה ולימדה תורה בזמן שכמעט לא נתנו לנשים. הוכיחה שתורה היא של כולן.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>טיול לטבריה: שפת הכנרת, קברי התנאים והרמב״ם, ולקראת הסוף — לומדים יחד משנה אחת קצרה על לימוד תורה, וכותבים עליה בספר השרשרת.</p>
+    <p class="note">כ־35–40 דקות נסיעה צפונה בכביש 90. מסלול מומלץ לאומת מפה ביום הטיול.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״מטילדה״</b> — רואלד דאהל. ילדה קטנה עם ראש ענק שבולעת ספרים ומנצחת עם החוכמה שלה.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>מדף הספרים שלי: כריכות של ספרים אמיתיים שאהבה — וכריכה אחת של ספר שהיא עוד תכתוב.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">אחר הצהריים מאוחר יפה במיוחד על שפת הכנרת</span>
+    <button class="done-btn" data-month="8">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 9. Sivan -->
+<section class="month" id="m9">
+  <div class="month-head">
+    <div class="num">9</div>
+    <div>
+      <div class="month-name">סיוון תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 6 ביוני 2027 · שבועות: 11 ביוני</div>
+    </div>
+  </div>
+  <div class="figure"><b>רות המואביה</b> — שבחרה ללכת עם נעמי, ליקטה שיבולים בשדה, ומצאה בית חדש בחסד. ממנה באה כל השלשלת עד דוד המלך.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>בוקר התנדבות בקטיף או בחווה בעמק — לקט, שכחה ופאה, ממש כמו רות. לקראת שבועות קוראים יחד את מגילת רות (ארבעה פרקים קטנים).</p>
+    <p class="note">לתאם מראש עם קיבוץ או מטע באזור — לא כל מקום מארח קוטפים קטנים.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״אן מהחווה הירוקה״</b> (״האסופית״) — לוסי מוד מונטגומרי. יתומה שנקלטת בחווה ומכובת כולם בלב — כמו רות.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>שדה שיבולים בעת קציר, ורות בין הערימות — זהב של קיץ.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">בוקר מוקדם — לפני החום</span>
+    <button class="done-btn" data-month="9">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 10. Tammuz -->
+<section class="month" id="m10">
+  <div class="month-head">
+    <div class="num">10</div>
+    <div>
+      <div class="month-name">תמוז תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 6 ביולי 2027</div>
+    </div>
+  </div>
+  <div class="figure"><b>רחל אשת רבי עקיבא</b> — שהאמינה בצמיחה ארוכת טווח: חיכתה שנים שהאדם שהיא אוהבת ילמד ויגדל, והשנים הוכיחו שהיא צדקה.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>ערב תכנון בבית: בוחרים יחד את <b>פרויקט החסד של השנה</b> — משהו קטן וקבוע שהיא מובילה עד אלול (למשל: קופת צדקה שבועית, אריזת מצרכים, טלפון שבועי לסבתא). רושמים תכנית קטנה בספר השרשרת.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״הארי פוטר ואבן החכמים״</b> — ג׳יי. קיי. רולינג. תחילתו של מסע ארוך — כמו הפרויקט שמתחיל החודש.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>פוסטר לפרויקט החסד שבחרה: שם, סלוגן, וסמל. מדביקים על הדלת שלה.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">חודש של התחלת מסע, לא של טיול</span>
+    <button class="done-btn" data-month="10">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 11. Av -->
+<section class="month" id="m11">
+  <div class="month-head">
+    <div class="num">11</div>
+    <div>
+      <div class="month-name">אב תשפ״ז</div>
+      <div class="rc-date">ראש חודש: 4 באוגוסט 2027</div>
+    </div>
+  </div>
+  <div class="figure"><b>רחל המשוררת</b> (בלובשטיין) — כתבה בעברית פשוטה ועמוקה על הכנרת שאהבה. קבורה ממש שם, מול המים.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>טיול ערב לבית הקברות כנרת על שפת האגם: קוראים את ״כנרת שלי״ ליד קברה, מסתובבים בין המשוררים, ויוצאים לשפת המים לשקיעה.</p>
+    <p class="note">כ־30 דקות נסיעה. בית הקברות פתוח בשעות היום בעיקרון — לוודא שעות לפני היציאה.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״שירי רחל״</b> — רחל בלובשטיין. שירים קצרים שקל לקרוא וקשה לשכוח.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>בוחרת את השיר שהכי נגע בה ומאיירת אותו. האיור הזה יהיה שער אלבום סוף השנה.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">ערב קיץ — לא בשעות החום</span>
+    <button class="done-btn" data-month="11">סיימנו ✓</button>
+  </div>
+</section>
+
+<!-- 12. Elul -->
+<section class="month finale" id="m12">
+  <div class="month-head">
+    <div class="num">12</div>
+    <div>
+      <div class="month-name">אלול תשפ״ז — השיא</div>
+      <div class="rc-date">ראש חודש: 3 בספטמבר 2027 · בת המצווה החודש!</div>
+    </div>
+  </div>
+  <div class="figure"><b>הדמות של החודש: היא עצמה.</b> אחרי 11 דמויות של נשים גדולות — מסתכלים על הנערה שהפכה להיות.</div>
+  <div class="section">
+    <h3>🗺️ הפעילות</h3>
+    <p>שלושה חלקים לחודש השיא: ראיון עם סבתא או דודה על המשפחה (ולהשלים את עץ המשפחה משבט); הצגת פרויקט החסד למשפחה — מה עשתה ומה למדה; וחגיגה קטנה ואינטימית לכבוד בת המצווה.</p>
+  </div>
+  <div class="section">
+    <h3>📖 ספר החודש</h3>
+    <p><b>״ארץ האגדות״</b> — כריס קולפר. תאומים שמגלים שסיפורי המשפחה שלהם חיים באמת — סיום מושלם לספר השרשרת שלכם.</p>
+  </div>
+  <div class="section">
+    <h3>🎨 משימת הציור</h3>
+    <p>הדף האחרון בספר השרשרת: ״מי הייתי בתחילת השנה — ומי אני עכשיו״. ואז בוחרים יחד את 12 הציורים לאלבום בת המצווה.</p>
+  </div>
+  <div class="done-row">
+    <span class="rc-date">מזל טוב! 🎉</span>
+    <button class="done-btn" data-month="12">סיימנו ✓</button>
+  </div>
+</section>
+
+<footer>
+  <div class="card">
+    <p><b>כמה דברים שחשוב לדעת:</b></p>
+    <p>· שעות פתיחה, מחירים ומסלולי נסיעה לא אומתו — לבדוק לפני כל יציאה.<br>
+    · כל הטיולים עד כ־45 דקות נסיעה משדמות מחולה, מתוכננים ליום חול או יום ראשון.<br>
+    · גמישים בתאריכים: ראש חודש הוא הסמל, לא דדליין. חודש שמתפספס — מדלגים בגאווה.<br>
+    · כל הציורים נשמרים בתיקייה אחת — בסוף השנה הם הופכים לאלבום.</p>
+    <p style="margin-top:10px">עודכן: כ׳ באוקטובר 2026 · נבנה באהבה לאבא ובת</p>
+  </div>
+</footer>
+
+</div><!-- /wrap -->
+
+<script>
+(function(){
+  var KEY='bm-progress-v1';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){state={};}
+  var buttons=document.querySelectorAll('.done-btn');
+  function render(){
+    var done=0;
+    buttons.forEach(function(b){
+      var m=b.getAttribute('data-month');
+      var on=!!state[m];
+      b.classList.toggle('on',on);
+      b.textContent=on?'בוצע! ✓':'סיימנו ✓';
+      var card=document.getElementById('m'+m);
+      if(card){card.classList.toggle('completed',on);}
+      if(on)done++;
+    });
+    var fill=document.getElementById('progressFill');
+    var label=document.getElementById('progressLabel');
+    if(fill){fill.style.width=(done/12*100)+'%';}
+    if(label){label.textContent=done+' מתוך 12';}
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click',function(){
+      var m=b.getAttribute('data-month');
+      state[m]=!state[m];
+      try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}
+      render();
+    });
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
