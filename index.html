@@ -136,6 +136,23 @@ details.alts .alt-in{padding:0 18px 14px;font-size:15px}
 .stages div{background:#fff;border-radius:10px;padding:8px 10px;font-size:13.5px;border:1px solid var(--hairline)}
 .stages b{display:block;color:var(--plum);font-family:'Heebo'}
 .shelf li{margin-inline-start:18px;margin-top:4px}
+
+.srctag.alive{background:var(--plum-soft);color:var(--plum);border:1px solid var(--plum)}
+.pool{margin:16px 0 30px}
+.pool h2{font-size:21px;margin:0 0 4px;color:var(--plum)}
+.pool .pool-sub{font-size:13.5px;color:var(--ink2);margin:0 0 12px}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.filters button{border:1px solid var(--hairline);background:#fff;border-radius:999px;padding:5px 13px;font-size:13.5px;font-weight:700;font-family:inherit;cursor:pointer;color:var(--ink2)}
+.filters button.on{background:var(--plum);color:#fff;border-color:var(--plum)}
+.woman{background:var(--card);border:1px solid var(--hairline);border-radius:14px;padding:11px 14px;margin-bottom:9px;box-shadow:var(--shadow)}
+.woman .whead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.woman h3{font-size:16px;margin:0}
+.woman .years{font-size:13px;color:var(--ink2);font-weight:400}
+.woman .theme{background:#f2ede6;color:#6b5f58;border:1px solid var(--hairline);border-radius:99px;padding:1px 10px;font-size:12.5px;font-weight:700}
+.woman p{font-size:14.5px;margin:5px 0 0}
+.woman p.fit{font-size:13.5px;color:var(--ink2);margin-top:2px}
+.woman .srcline{margin-top:6px}
+.woman a.src{font-size:12.5px;color:var(--teal);font-weight:600}
 </style>
 </head>
 <body>
@@ -148,15 +165,299 @@ details.alts .alt-in{padding:0 18px 14px;font-size:15px}
 <div class="wrap">
 <div class="progress-shell"><div class="progress-line"><span id="progressLabel">0 מתוך 12</span><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div></div></div>
 <div class="intro">
-  <strong>איך זה עובד.</strong> בכל חודש: שאלה אחת שהיא לוקחת איתה, פעולה אחת שעושים יחד (שרים, הולכים, מבשלים, שותלים), ואישה אחת כדוגמה. הדמות היא דוגמה לשאלה, לא נושא ללימוד.<br><br>
-  <strong>בלי לחץ.</strong> חודש שלא יצא, לא משלימים אותו. החודש הבא עומד בפני עצמו. התאריך הוא ״א׳ בחודש״ כפתיחה, לא דדליין, והפעילות יכולה להיות בכל יום באותו חודש.<br><br>
-  <strong>ארבעה שלבים:</strong>
-  <div class="stages"><div><b>1. שורשים</b>חשוון–טבת</div><div><b>2. קול ובחירה</b>שבט–אדר ב׳</div><div><b>3. אחריות ועשייה</b>ניסן–סיוון</div><div><b>4. הדרך שלי</b>תמוז–אלול</div></div><br>
-  <strong>ארבעה חודשים בבחירתה:</strong> טבת, אדר א׳, אב ואלול. <strong>לפחות שלוש פגישות עם נשים חיות:</strong> חשוון (ראיון במשפחה), טבת, ואדר א׳ או אב. פגישה היא תוספת לפעולה המשותפת, לא תחליף לה.<br><br>
-  <strong>לא יותר מארבע יציאות גדולות</strong> (טבריה, חצר כנרת ועוד), השאר קרוב לבית. <strong>לכל חודש יש חלופה:</strong> דמות אחת ופעילות אחת בבית, בחינם, שמתאימות גם לגשם. הדמויות העכשוויות בחלופות הן הצעות; ההחלטה מי מתאימה היא שלכם.<br><br>
-  <strong>סימון מקורות:</strong> <span class="srctag tradition">מסורת</span> מקרא או חז״ל · <span class="srctag hist">מזוהה היסטורית</span> אתר או דמות לפי זיהוי · <span class="srctag doc">מתועד</span> אישה שקיימים עליה תיעוד ומקורות.<br><br>
-  <strong>זה תכנון בלבד.</strong> לא נוצר קשר עם אף אחד, ולא הוזמן ולא שולם דבר.
+  <strong>איך זה עובד:</strong> בכל חודש שאלה אחת, פעולה אחת שעושים יחד, ואישה אחת כדוגמה לשאלה — לא שיעור. חודש שלא יצא, לא משלימים. לא יותר מארבע יציאות גדולות בשנה.<br>
+  <strong>סימון מקורות:</strong> <span class="srctag tradition">מסורת</span> מקרא וחז״ל · <span class="srctag doc">מתועד</span> קיימים עליה תיעוד ומקורות · <span class="srctag hist">מזוהה היסטורית</span> זיהוי מסורתי · <span class="srctag alive">חיה</span> בחיינו היום.
 </div>
+
+
+<section class="pool" id="pool">
+  <h2>מאגר נשים לבחירה</h2>
+  <p class="pool-sub"><span id="poolCount">47 נשים</span>, מן המקרא ועד היום. אפשר להחליף בכל חודש את הדמות באחת מכאן, ואפשר פשוט לעיין יחד. הסינון לפי הערך שמדבר אליכם החודש.</p>
+  <div class="filters" id="poolFilters"><button data-theme="" class="on">הכול</button><button data-theme="אומץ">אומץ</button><button data-theme="טוב לב">טוב לב</button><button data-theme="קול">קול</button><button data-theme="לימוד">לימוד</button><button data-theme="יצירתיות">יצירתיות</button><button data-theme="נתינה">נתינה</button><button data-theme="מנהיגות">מנהיגות</button></div>
+  <article class="woman" data-theme="אומץ" data-tag="מסורת">
+  <div class="whead"><h3>דבורה הנביאה</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">אומץ</span></div>
+  <p>שפטה את ישראל, קראה לברק לצאת למלחמה בסיסרא ושרה שירת ניצחון (שופטים ד-ה).</p>
+  <p class="fit">שופטת, מצביאה ומשוררת במקום אחד.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/Judges.4?lang=he" target="_blank" rel="noopener">תנ״ך: שופטים ד</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="מסורת">
+  <div class="whead"><h3>אסתר המלכה</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">אומץ</span></div>
+  <p>מלכת פרס שחשפה את יהדותה וסיכנה את חייה כדי להציל את עמה (מגילת אסתר).</p>
+  <p class="fit">מלמדת שגם ילדה צעירה יכולה לשנות גורל של עם.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/Esther?lang=he" target="_blank" rel="noopener">מגילת אסתר</a></div>
+</article><article class="woman" data-theme="טוב לב" data-tag="מסורת">
+  <div class="whead"><h3>רות המואבייה</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">טוב לב</span></div>
+  <p>נצמדה לנעמי חמותה, ליקטה שיבולים בשדה בועז ונעשתה אם-ביתו של דוד המלך (מגילת רות).</p>
+  <p class="fit">סיפור קצר ויפה שאפשר לקרוא יחד בשבועות.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/Ruth?lang=he" target="_blank" rel="noopener">מגילת רות</a></div>
+</article><article class="woman" data-theme="קול" data-tag="מסורת">
+  <div class="whead"><h3>חנה</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">קול</span></div>
+  <p>אם שמואל הנביא; מתפילתה (שמואל א, פרק ב) למדה חכמה את הלכות התפילה.</p>
+  <p class="fit">מראה שמילים פרטיות, בשקט, משנות היסטוריה.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/I_Samuel.2?lang=he" target="_blank" rel="noopener">תנ״ך: שמואל א</a></div>
+</article><article class="woman" data-theme="קול" data-tag="מסורת">
+  <div class="whead"><h3>מרים הנביאה</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">קול</span></div>
+  <p>אחות משה ואהרן; שמרה על אחיה התינוק ביאור והובילה את הנשים בשירה ובתופים אחרי קריעת ים סוף (שמות טו).</p>
+  <p class="fit">אחות גדולה ששומרת, ואחר כך שרה.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/Exodus.15.20?lang=he" target="_blank" rel="noopener">תנ״ך: שמות טו</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="מסורת">
+  <div class="whead"><h3>יעל אשת חבר הקיני</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">אומץ</span></div>
+  <p>קלטה את סיסרא באהלה וחיסלה אותו, וכך הסתיימה המלחמה (שופטים ד).</p>
+  <p class="fit">דמות קטנה מהשוליים שמכריעה מלחמה גדולה.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/Judges.4.17-22?lang=he" target="_blank" rel="noopener">תנ״ך: שופטים ד</a></div>
+</article><article class="woman" data-theme="לימוד" data-tag="מסורת">
+  <div class="whead"><h3>חולדה הנביאה</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">לימוד</span></div>
+  <p>נביאה בירושלים בימי המלך יאשיהו; אליה שלח המלך את שריו לאמת את ספר התורה שנמצא (מלכים ב, כב).</p>
+  <p class="fit">כשהמלך רצה תשובה אמיתית, הוא שלח אליה.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/II_Kings.22.14-20?lang=he" target="_blank" rel="noopener">תנ״ך: מלכים ב כב</a></div>
+</article><article class="woman" data-theme="מנהיגות" data-tag="מסורת">
+  <div class="whead"><h3>אביגיל</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">מנהיגות</span></div>
+  <p>אשה נבונה מכרמל; בחוכמה ובדברים רכים מנעה מדוד שפיכות דמים (שמואל א, כה).</p>
+  <p class="fit">מראה שמילה חכמה עוצרת חרב.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/I_Samuel.25?lang=he" target="_blank" rel="noopener">תנ״ך: שמואל א כה</a></div>
+</article><article class="woman" data-theme="לימוד" data-tag="מסורת">
+  <div class="whead"><h3>ברוריה</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">לימוד</span></div>
+  <p>אשת רבי מאיר; תנאית לומדת שדבריה מצוטטים במשנה ובתלמוד.</p>
+  <p class="fit">אישה שיושבת ולומדת בתוך בית המדרש של החכמים.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/Berakhot.10a?lang=he" target="_blank" rel="noopener">תלמוד: ברכות י ע״א</a></div>
+</article><article class="woman" data-theme="נתינה" data-tag="מסורת">
+  <div class="whead"><h3>רחל אשת רבי עקיבא</h3>
+  <span class="srctag tradition">מסורת</span> <span class="theme">נתינה</span></div>
+  <p>בת כלבא שבוע; תמכה בלימודו של רבי עקיבא עשרים וארבע שנה, והוא ייחס לה את תורתו ותורת תלמידיו (כתובות סב ע״ב).</p>
+  <p class="fit">מאחורי תלמיד חכם גדול עומדת לפעמים אישה שוויתרה.</p>
+  <div class="srcline"><a class="src" href="https://www.sefaria.org.il/Ketubot.62b?lang=he" target="_blank" rel="noopener">תלמוד: כתובות סב ע״ב</a></div>
+</article><article class="woman" data-theme="נתינה" data-tag="מתועד">
+  <div class="whead"><h3>דונה גרציה נשיא</h3><span class="years"> 1510–1569</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">נתינה</span></div>
+  <p>אשת עסקים ונדבנית שהצילה אנוסים; ב־1561 חכרה עם דון יוסף נשיא את טבריה ליישוב יהודי.</p>
+  <p class="fit">אישה שקנה עיר שלמה כדי שיהודים יוכלו לחיות בה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/דונה_גרציה_נשיא" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="לימוד" data-tag="מתועד">
+  <div class="whead"><h3>שרה שנירר</h3><span class="years"> 1883–1935</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">לימוד</span></div>
+  <p>תופרת מקרקוב שייסדה את תנועת בתי הספר ״בית יעקב״ לבנות יהודיות, שמנתה עשרות אלפי תלמידות עוד בחייה.</p>
+  <p class="fit">התחילה עם כיתה אחת קטנה - ושינתה חינוך של עם.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/שרה_שנירר" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="מנהיגות" data-tag="מתועד">
+  <div class="whead"><h3>חנה מייזל שוחט</h3><span class="years"> 1883–1972</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">מנהיגות</span></div>
+  <p>האגרונומית הראשונה בארץ ישראל; ב־1911 ייסדה בכנרת את ״חוות העלמות״, בית ספר חקלאי לנשים.</p>
+  <p class="fit">האמינה שגם בנות יכולות לעבוד אדמה - ולימדה אותן איך.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/חנה_מייזל_שוחט" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="לימוד" data-tag="מתועד">
+  <div class="whead"><h3>נחמה ליבוביץ</h3><span class="years"> 1905–1997</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">לימוד</span></div>
+  <p>מורה ופרשנית מקרא, כלת פרס ישראל לחינוך (1956); שלחה שנים ״דפים״ עם שאלות על פרשת השבוע.</p>
+  <p class="fit">מלמדת לשאול שאלה טובה במקום לזכור תשובה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/נחמה_ליבוביץ" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="מתועד">
+  <div class="whead"><h3>שרה אהרונסון</h3><span class="years"> 1890–1917</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">אומץ</span></div>
+  <p>מראשי מחתרת הריגול ניל״י מזכרון יעקב, שסייעה לבריטים במלחמת העולם הראשונה; נתפסה ושמה קץ לחייה בלי להסגיר חברים.</p>
+  <p class="fit">גיבורה שאפשר לקרוא עליה בספר הנוער ״שרה, גיבורת ניל״י״.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/שרה_אהרונסון" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="מתועד">
+  <div class="whead"><h3>חנה סנש</h3><span class="years"> 1921–1944</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">אומץ</span></div>
+  <p>משוררת וצנחנית; עלתה מהונגריה לקיבוץ שדות ים, צנחה באירופה הכבושה להציל יהודים, נתפסה והוצאה להורג בגיל 23.</p>
+  <p class="fit">כתבה את ״אלי אלי״ - שיר שרבים מכירים בלי לדעת מי כתב.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/חנה_סנש" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="מנהיגות" data-tag="מתועד">
+  <div class="whead"><h3>גולדה מאיר</h3><span class="years"> 1898–1978</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">מנהיגות</span></div>
+  <p>ראש ממשלת ישראל הרביעית (1969–1974) והאישה היחידה עד כה בתפקיד; לפני כן שרת עבודה ושרת חוץ.</p>
+  <p class="fit">ממורה במילווקי לראשות ממשלה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/גולדה_מאיר" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="קול" data-tag="מתועד">
+  <div class="whead"><h3>עדה מימון</h3><span class="years"> 1893–1973</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">קול</span></div>
+  <p>ממובילות תנועת הפועלות, חברת כנסת בכנסות הראשונה והשנייה ומיוזמות חוק שיווי זכויות האשה (1951).</p>
+  <p class="fit">נלחמה שגם לבנות יהיה קול בקלפי.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/עדה_מימון" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="קול" data-tag="מתועד">
+  <div class="whead"><h3>גאולה כהן</h3><span class="years"> 1925–2019</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">קול</span></div>
+  <p>שדרנית מחתרת לח״י (כינוי ״אילנה״) ולאחר קום המדינה חברת כנסת במשך כ־25 שנה.</p>
+  <p class="fit">מהקול הסמוי במחתרת לדוכן הכנסת.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/גאולה_כהן" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="מתועד">
+  <div class="whead"><h3>רחל המשוררת</h3><span class="years"> 1890–1931</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">יצירתיות</span></div>
+  <p>משוררת; למדה בחוות העלמות בכנרת וכתבה בעברית פשוטה על האגם, האדמה והגעגוע.</p>
+  <p class="fit">השירים שלה קצרים וברורים - קל להעתיק בית אחד בכתב יד.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/רחל_המשוררת" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="מתועד">
+  <div class="whead"><h3>לאה גולדברג</h3><span class="years"> 1911–1970</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">יצירתיות</span></div>
+  <p>משוררת, מתרגמת וסופרת ילדים (״דירה להשכיר״, ״מסע אל האי הדומם״); הקימה את החוג לספרות כללית באוניברסיטה העברית.</p>
+  <p class="fit">סופרת שהספרים שלה לילדים עדיין קלאסיקה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/לאה_גולדברג" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="מתועד">
+  <div class="whead"><h3>זלדה</h3><span class="years"> 1914–1984</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">יצירתיות</span></div>
+  <p>משוררת ירושלמית, ממשפחת חב״ד; כתבה שירה דתית-לירית (״לכל איש יש שם״).</p>
+  <p class="fit">מראה שאפשר להיות דתייה ומשוררת גדולה בו זמנית.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/זלדה" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="מתועד">
+  <div class="whead"><h3>דבורה ברון</h3><span class="years"> 1887–1956</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">יצירתיות</span></div>
+  <p>חלוצת הפרוזה העברית הנשית; סיפוריה על חיי העיירה יצאו בארבעה כרכים.</p>
+  <p class="fit">אישה ראשונה שהתפרנסה מכתיבה ספרותית בעברית.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/דבורה_בארון" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="מתועד">
+  <div class="whead"><h3>נעמי שמר</h3><span class="years"> 1930–2004</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">יצירתיות</span></div>
+  <p>פזמונאית מקבוצת כנרת; כתבה והלחינה שירים שהפכו לנכס צאן ברזל, בהם ״ירושלים של זהב״.</p>
+  <p class="fit">ילדת כנרת שכתבה את שירי המדינה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/נעמי_שמר" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="מתועד">
+  <div class="whead"><h3>אנה טיכו</h3><span class="years"> 1894–1980</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">יצירתיות</span></div>
+  <p>ציירת ירושלמית, כלת פרס ישראל לציור; התפרסמה בציורי הרי ירושלים ובאיורי עין בעפרון.</p>
+  <p class="fit">למי שאוהבת לצייר - עין ועפרון הם כל מה שצריך.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/אנה_טיכו" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="קול" data-tag="מתועד">
+  <div class="whead"><h3>שושנה דמארי</h3><span class="years"> 1923–2006</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">קול</span></div>
+  <p>זמרת ילידת תימן; קולה ליווה את היישוב מלפני קום המדינה וזכתה בכינוי ״מלכת הזמר העברי״.</p>
+  <p class="fit">קול שהגיע מתימן ושר למדינה שלמה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/שושנה_דמארי" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="קול" data-tag="מתועד">
+  <div class="whead"><h3>עפרה חזה</h3><span class="years"> 1957–2000</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">קול</span></div>
+  <p>זמרת משכונת התקווה; ייצגה את ישראל באירוויזיון 1983 (״חי״, מקום שני) וזכתה להצלחה עולמית.</p>
+  <p class="fit">מהשכונה לבמה הגדולה בעולם.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/עפרה_חזה" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="מתועד">
+  <div class="whead"><h3>שרה לוי-תנאי</h3><span class="years"> 1910–2005</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">יצירתיות</span></div>
+  <p>כוריאוגרפית ילידת ירושלים; ב־1949 ייסדה את תיאטרון המחול ״ענבל״ לשימור מסורת המחול התימנית.</p>
+  <p class="fit">בנתה להקה שמכבדת מסורת ומחדשת אותה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/שרה_לוי-תנאי" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="חיה">
+  <div class="whead"><h3>אליס מילר</h3><span class="years"> 1972–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">אומץ</span></div>
+  <p>מהנדסת אווירונאוטיקה; עתרה לבג״ץ וב־1995 נפסק שקורס הטיס בצה״ל ייפתח לנשים.</p>
+  <p class="fit">עתירה אחת של אישה אחת שינתה את הצבא.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/אליס_מילר" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="מתועד">
+  <div class="whead"><h3>יעל רום</h3><span class="years"> 1932–2006</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">אומץ</span></div>
+  <p>הטייסת הראשונה שהוכשרה והוסמכה בחיל האוויר הישראלי (1950).</p>
+  <p class="fit">טסה לפני שהיו אומרים שאפשר.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/יעל_רום" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="לימוד" data-tag="מתועד">
+  <div class="whead"><h3>מרים בן-פרץ</h3><span class="years"> 1927–2020</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">לימוד</span></div>
+  <p>פרופסור לחינוך באוניברסיטת חיפה ונשיאת מכללת תל-חי; כלת פרס ישראל לחקר החינוך (2006).</p>
+  <p class="fit">הקדישה את חייה לשאלה איך מלמדים טוב יותר.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/מרים_בן-פרץ" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="לימוד" data-tag="מתועד">
+  <div class="whead"><h3>עדה יונת</h3><span class="years"> 1939–2026</span>
+  <span class="srctag doc">מתועד</span> <span class="theme">לימוד</span></div>
+  <p>כימאית במכון ויצמן; חתנת פרס נובל לכימיה (2009) על פענוח מבנה הריבוזום.</p>
+  <p class="fit">האישה הישראלית הראשונה שזכתה בפרס נובל.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/עדה_יונת" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="לימוד" data-tag="חיה">
+  <div class="whead"><h3>רות ארנון</h3><span class="years"> 1933–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">לימוד</span></div>
+  <p>אימונולוגית במכון ויצמן, כלת פרס ישראל (2001); שותפה לפיתוח התרופה קופקסון לטרשת נפוצה.</p>
+  <p class="fit">מדענית שהמחקר שלה מקל על חולים בכל העולם.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/רות_ארנון" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="חיה">
+  <div class="whead"><h3>יעל שבח</h3><span class="years"> 1985–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">אומץ</span></div>
+  <p>מחנכת ופובליציסטית מחוות גלעד; אלמנת הרב רזיאל שבח הי״ד שנרצח ב־2018, ואם לשישה.</p>
+  <p class="fit">בחרה להמשיך לבנות ולחנך גם אחרי האובדן.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/יעל_שבח" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="מנהיגות" data-tag="חיה">
+  <div class="whead"><h3>אורית סטרוק</h3><span class="years"> 1960–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">מנהיגות</span></div>
+  <p>שרת ההתיישבות והמשימות הלאומיות; חברת כנסת מטעם הציונות הדתית ומתגוררת ביישוב היהודי בחברון.</p>
+  <p class="fit">אישה מעולם ההתיישבות שהגיעה לשולחן הממשלה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/אורית_סטרוק" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="חיה">
+  <div class="whead"><h3>לינוי אשרם</h3><span class="years"> 1999–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">אומץ</span></div>
+  <p>אלופה אולימפית בהתעמלות אמנותית (טוקיו 2020) - האישה הישראלית הראשונה שזכתה במדליית זהב אולימפית.</p>
+  <p class="fit">הוכיחה שהתמדה של שנים נראית כמו קלות.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/לינוי_אשרם" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="חיה">
+  <div class="whead"><h3>אבישג סמברג</h3><span class="years"> 2001–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">אומץ</span></div>
+  <p>מתחרת טאקוונדו מגדרה; זכתה במדליית ארד באולימפיאדת טוקיו 2020 בגיל 19.</p>
+  <p class="fit">בגיל 19 כבר עמדה על הפודיום האולימפי.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/אבישג_סמברג" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="אומץ" data-tag="חיה">
+  <div class="whead"><h3>רז הרשקו</h3><span class="years"> 1998–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">אומץ</span></div>
+  <p>ג׳ודוקא מנתניה; מדליסטית כסף באולימפיאדת פריז 2024 במשקל מעל 78 ק״ג.</p>
+  <p class="fit">מראה שכוח מגיע בכל מבנה גוף.</p>
+  <div class="srcline"><a class="src" href="https://www.olympicsil.co.il/%D7%A8%D7%96-%D7%94%D7%A8%D7%A9%D7%A7%D7%95-%D7%9E%D7%93%D7%9C%D7%99%D7%99%D7%AA-%D7%9B%D7%A1%D7%A3-%D7%A4%D7%A8%D7%99%D7%96-2024/" target="_blank" rel="noopener">הוועד האולימפי</a></div>
+</article><article class="woman" data-theme="קול" data-tag="חיה">
+  <div class="whead"><h3>אביטל לייבוביץ</h3><span class="years"> 1971–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">קול</span></div>
+  <p>אלופת משנה במילואים מדובר צה״ל; מ־2014 מנהלת את משרד AJC בירושלים.</p>
+  <p class="fit">בנתה קריירה שלמה סביב מילים והסברה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/אביטל_ליבוביץ" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="לימוד" data-tag="חיה">
+  <div class="whead"><h3>עדינה בר-שלום</h3><span class="years"> 1945–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">לימוד</span></div>
+  <p>ייסדה בירושלים את המכללה החרדית הראשונה ללימודי תואר; כלת פרס ישראל על מפעל חיים (2014).</p>
+  <p class="fit">פתחה דלת של השכלה גבוהה לאלפי נשים.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/עדינה_בר-שלום" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="טוב לב" data-tag="חיה">
+  <div class="whead"><h3>רחלי פרנקל</h3><span class="years"> 1968–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">טוב לב</span></div>
+  <p>מורה לתלמוד ויועצת הלכה בבתי מדרש לנשים; אמו של נפתלי פרנקל הי״ד, ומקולות האחדות הבולטים מאז 2014.</p>
+  <p class="fit">בחרה אחדות וחסד ברגע הכי קשה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/רחל_שפרכר-פרנקל" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="קול" data-tag="חיה">
+  <div class="whead"><h3>סיון רהב-מאיר</h3><span class="years"> 1981–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">קול</span></div>
+  <p>עיתונאית ומנחת טלוויזיה ורדיו; מחברת בין חדשות לתורה בתוכניות ובספרים.</p>
+  <p class="fit">מראה שאפשר לדבר תורה גם באולפן חדשות.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/סיון_רהב_מאיר" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="חיה">
+  <div class="whead"><h3>נעמי רגן</h3><span class="years"> 1949–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">יצירתיות</span></div>
+  <p>סופרת ומחזאית אורתודוקסית מודרנית הכותבת באנגלית; ספריה תורגמו לשפות רבות.</p>
+  <p class="fit">כותבת על עולם של נשים דתיות - והעולם קורא.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/נעמי_רגן" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="קול" data-tag="חיה">
+  <div class="whead"><h3>נטע ברזילי</h3><span class="years"> 1993–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">קול</span></div>
+  <p>זמרת מהוד השרון; זכתה באירוויזיון 2018 עם השיר ״Toy״.</p>
+  <p class="fit">נשארה עצמה - וזה בדיוק מה שניצח.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/נטע_ברזילי" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="חיה">
+  <div class="whead"><h3>נורית הירש</h3><span class="years"> 1942–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">יצירתיות</span></div>
+  <p>מלחינה; כתבה את הלחנים ל״בשנה הבאה״ ולעוד מאות שירים מפורסמים.</p>
+  <p class="fit">מלחינה אחת שמאחורי שירים שכולם שרים.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/נורית_הירש" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="קול" data-tag="חיה">
+  <div class="whead"><h3>אופירה אסייג</h3><span class="years"> 1973–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">קול</span></div>
+  <p>שדרנית רדיו ומנחת טלוויזיה, מהבולטות בשידור הספורט בישראל.</p>
+  <p class="fit">נכנסה לתחום שנחשב ״של גברים״ והפכה לדעתנית מובילה בו.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/אופירה_אסייג" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article><article class="woman" data-theme="יצירתיות" data-tag="חיה">
+  <div class="whead"><h3>יהודית רביץ</h3><span class="years"> 1956–</span>
+  <span class="srctag alive">חיה</span> <span class="theme">יצירתיות</span></div>
+  <p>זמרת-יוצרת, מלחינה ומפיקה מוזיקלית מבאר שבע; זוכת פרס מפעל חיים מטעם אקו״ם (2022).</p>
+  <p class="fit">חמישים שנה של יצירה - ועדיין על הבמה.</p>
+  <div class="srcline"><a class="src" href="https://he.wikipedia.org/wiki/יהודית_רביץ" target="_blank" rel="noopener">ויקיפדיה</a></div>
+</article>
+</section>
 
 <section class="month now" id="m1">
   <div class="month-head">
@@ -382,10 +683,31 @@ details.alts .alt-in{padding:0 18px 14px;font-size:15px}
     · פארק המעיינות וגן השלושה (הסחנה) הם שני אתרים שונים.<br>
     · תאריכי הלוח לפי hebcal.com.<br>
     · כל הציורים והכתובים נשמרים בתיקייה אחת.</p>
-    <p style="margin-top:10px">עודכן: כ׳ באוקטובר 2026 (גרסה 3) · נבנה באהבה לאבא ובת</p>
+    <p style="margin-top:10px">עודכן: כ׳ באוקטובר 2026 (גרסה 4) · נבנה באהבה לאבא ובת</p>
   </div>
 </footer>
 </div>
+
+<script>
+(function(){
+  var filters=document.getElementById('poolFilters');
+  if(!filters)return;
+  var cards=document.querySelectorAll('.woman');
+  filters.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    filters.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on');
+    var t=b.getAttribute('data-theme'); var n=0;
+    cards.forEach(function(c){
+      var show=!t||c.getAttribute('data-theme')===t;
+      c.style.display=show?'':'none'; if(show)n++;
+    });
+    var cnt=document.getElementById('poolCount');
+    if(cnt)cnt.textContent=n+' נשים';
+  });
+})();
+</script>
+
 <script>
 (function(){
   var KEY='bm-progress-v1';
